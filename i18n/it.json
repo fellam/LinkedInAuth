@@ -1,0 +1,14 @@
+{
+  "linkedinauth-desc": "Autenticazione OAuth LinkedIn per Masticationpedia",
+  "linkedinauthlogin": "LinkedInAuth accesso",
+  "linkedinauthcallback": "LinkedInAuth callback",
+  "linkedinauthstatus": "LinkedInAuth stato",
+  "linkedinauthautologin": "LinkedInAuth auto-login",
+  "linkedinauthusers": "LinkedInAuth utenti",
+  "linkedinauthwelcome": "LinkedInAuth benvenuto",
+  "linkedinauth-status-intro": "Valori correnti della configurazione LinkedInAuth:",
+  "linkedinauth-status-connectivity-title": "Test connettività",
+  "linkedinauth-status-connectivity-run": "Esegui test connettività",
+  "specialpages-group-LinkedInAuth": "LinkedInAuth",
+  "right-linauth": "Accesso alle pagine di amministrazione LinkedInAuth"
+}

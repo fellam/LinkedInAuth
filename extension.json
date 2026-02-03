@@ -1,0 +1,73 @@
+{
+  "manifest_version": 2,
+  "name": "LinkedInAuth",
+  "author": [
+    "Masticationpedia"
+  ],
+  "url": "https://dev.masticationpedia.org",
+  "descriptionmsg": "linkedinauth-desc",
+  "license-name": "GPL-2.0-or-later",
+  "type": "authentication",
+  "requires": {
+    "MediaWiki": ">= 1.43.0"
+  },
+  "AutoloadClasses": {
+    "LinkedInAuthHooks": "includes/LinkedInAuthHooks.php",
+    "LinkedInAuthSpecialLogin": "includes/SpecialLinkedInAuthLogin.php",
+    "LinkedInAuthSpecialCallback": "includes/SpecialLinkedInAuthCallback.php",
+    "LinkedInAuthSpecialStatus": "includes/SpecialLinkedInAuthStatus.php",
+    "LinkedInAuthSpecialAutoLogin": "includes/SpecialLinkedInAuthAutoLogin.php",
+    "LinkedInAuthSpecialUsers": "includes/SpecialLinkedInAuthUsers.php",
+    "LinkedInAuthSpecialWelcome": "includes/SpecialLinkedInAuthWelcome.php",
+    "LinkedInAuthConfig": "includes/LinkedInAuthConfig.php",
+    "LinkedInAuthDebug": "includes/LinkedInAuthDebug.php"
+  },
+  "Hooks": {
+    "ParserFirstCallInit": "LinkedInAuthHooks::onParserFirstCallInit",
+    "LoadExtensionSchemaUpdates": "LinkedInAuthHooks::onLoadExtensionSchemaUpdates"
+  },
+  "SpecialPages": {
+    "LinkedInAuthLogin": "LinkedInAuthSpecialLogin",
+    "LinkedInAuthCallback": "LinkedInAuthSpecialCallback",
+    "LinkedInAuthStatus": "LinkedInAuthSpecialStatus",
+    "LinkedInAuthAutoLogin": "LinkedInAuthSpecialAutoLogin",
+    "LinkedInAuthUsers": "LinkedInAuthSpecialUsers",
+    "LinkedInAuthWelcome": "LinkedInAuthSpecialWelcome"
+  },
+  "SpecialPageGroups": {
+    "LinkedInAuthLogin": "LinkedInAuth",
+    "LinkedInAuthCallback": "LinkedInAuth",
+    "LinkedInAuthStatus": "LinkedInAuth",
+    "LinkedInAuthAutoLogin": "LinkedInAuth",
+    "LinkedInAuthUsers": "LinkedInAuth",
+    "LinkedInAuthWelcome": "LinkedInAuth"
+  },
+  "Permissions": {
+    "linauth": {
+      "descriptionmsg": "right-linauth"
+    }
+  },
+  "Config": {
+    "LinkedInAuthLoginUrl": "",
+    "LinkedInAuthCallbackUrl": "",
+    "LinkedInAuthAutoLoginUrl": "",
+    "LinkedInAuthClientId": "",
+    "LinkedInAuthClientSecret": "",
+    "LinkedInAuthRedirectUri": "",
+    "LinkedInAuthDefaultReturnTo": "",
+    "LinkedInAuthHmacKey": "",
+    "LinkedInAuthLogPath": "",
+    "LinkedInAuthDebug": false
+  },
+  "MessagesDirs": {
+    "LinkedInAuth": [
+      "i18n"
+    ]
+  },
+  "SpecialPageAliases": {
+    "LinkedInAuth": "LinkedInAuth.alias.php"
+  },
+  "ExtensionMessagesFiles": {
+    "LinkedInAuthAlias": "LinkedInAuth.alias.php"
+  }
+}
