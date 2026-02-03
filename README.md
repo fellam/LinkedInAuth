@@ -1,7 +1,7 @@
 # LinkedInAuth (MediaWiki extension)
 
 ## Purpose
-Provide LinkedIn OAuth-based sign-in for MediaWiki using an extension, replacing ad-hoc PHP endpoints over time.
+LinkedInAuth is a MediaWiki extension that adds LinkedIn OAuth login with a <linAuth> tag, dedicated Special pages (login, callback, auto-login, status, users), and automatic MediaWiki user creation and group assignment. Config is LocalSettings-only.
 
 ## Current status
 - Parser tag: `<linAuth>...</linAuth>` renders as button/link/custom based on `type`
