@@ -9,7 +9,6 @@ LinkedInAuth is a MediaWiki extension that adds LinkedIn OAuth login with a <lin
 - Callback handler is `Special:LinkedInAuthCallback`
 - Auto-login handler is `Special:LinkedInAuthAutoLogin`
 - Admin pages: `Special:LinkedInAuthStatus`, `Special:LinkedInAuthUsers`, `Special:LinkedInAuthWelcome`
-- Legacy OAuth scripts were archived out of `data/wiki/oauth/` to ensure the extension runs standalone
 
 ## Features
 1) Enable with:
@@ -24,7 +23,7 @@ wfLoadExtension( 'LinkedInAuth' );
 <linAuth type="button">Apply via LinkedIn</linAuth>
 <linAuth type="link">Apply via LinkedIn</linAuth>
 <linAuth type="custom">
-<a href="/Special:LinkedInAuthLogin" class="mw-ui-button">Apply via LinkedIn</a>
+<html><a href="/Special:LinkedInAuthLogin" class="mw-ui-button">Apply via LinkedIn</a></html>
 </linAuth>
 ```
 
@@ -40,21 +39,20 @@ The tag name is case-insensitive (`<linAuth>` or `<linauth>`). Use it to embed t
 <linAuth type="custom">
 <div class="tooltip-wrapper">
   <a class="hero-cta-button tooltip-trigger-expert"
-     href="https://dev.masticationpedia.org/Special:LinkedInAuthLogin">
+     href="/Special:LinkedInAuthLogin">
       <span class="hero-action__icon hero-action__icon--linkedin"></span>
       <span class="hero-action__label">Apply via LinkedIn</span>
   </a>
   <div class="tooltip-content-expert">
     <strong>Apply via LinkedIn</strong><br>
     Sign in with your LinkedIn profile to immediately create and activate
-    your Masticationpedia account.<br><br>
+    your account.<br><br>
     LinkedIn identification is used to maintain
     a recognizable, accountable, and coherent scientific community
     aligned with the nature of the project.<br><br>
     After logging in, you will be able to access reserved content
     using your MediaWiki session
-    (or by returning through the same LinkedIn access).<br><br>
-    Access is not linked to donations or any form of financial support.
+    (or by returning through the same LinkedIn access).<br>
   </div>
 </div>
 </linAuth>
@@ -90,7 +88,7 @@ Recommended LinkedIn app redirect URL (index.php form):
 `https://your-wiki.example/index.php?title=Special:LinkedInAuthCallback`
 
 ## Default auto-login entry point
-The special page `Special:LinkedInAuthAutoLogin` replaces `/oauth/mw-auto-login.php`.
+The special page `Special:LinkedInAuthAutoLogin` handles the automatic login flow.
 You can set `$wgLinkedInAuthAutoLoginUrl` to keep using the legacy script if needed.
 
 ## Database tables
@@ -115,8 +113,6 @@ wfLoadExtension( 'LinkedInAuth' );
 
 ## LocalSettings-only secrets
 The extension reads credentials and the HMAC signing key from `LocalSettings.php` only.
-No `secure_config/keys.php` fallback is used.
 
 ## Notes
-- This extension will progressively absorb the current custom LinkedIn OAuth PHP scripts.
-- At each change, this README will be updated to reflect actual behavior.
+
