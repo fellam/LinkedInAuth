@@ -47,12 +47,8 @@ The tag name is case-insensitive (`<linAuth>` or `<linauth>`). Use it to embed t
     <strong>Apply via LinkedIn</strong><br>
     Sign in with your LinkedIn profile to immediately create and activate
     your account.<br><br>
-    LinkedIn identification is used to maintain
-    a recognizable, accountable, and coherent scientific community
-    aligned with the nature of the project.<br><br>
-    After logging in, you will be able to access reserved content
-    using your MediaWiki session
-    (or by returning through the same LinkedIn access).<br>
+    After logging in, you will be able to access content
+    using your MediaWiki account.<br>
   </div>
 </div>
 </linAuth>
